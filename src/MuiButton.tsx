@@ -22,9 +22,7 @@ export const MuiButton = () => {
     updatedalignment: String[],
   ) => {
     setAalignment(updatedalignment)
-    setTimeout(() => {
-      console.log(alignment)
-    }, 50)
+    console.log(alignment)
   }
   return (
     <Stack spacing={2}>
