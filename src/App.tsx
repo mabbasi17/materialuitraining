@@ -1,13 +1,15 @@
 import './App.css'
+import { MuiTextField } from './MuiTextField'
 
-import { MuiButton } from './MuiButton'
+// import { MuiButton } from './MuiButton'
 // import { MuiTypography } from './MuiTypography'
 
 function App() {
   return (
     <div className="App">
       {/* <MuiTypography /> */}
-      <MuiButton />
+      {/* <MuiButton /> */}
+      <MuiTextField />
     </div>
   )
 }
