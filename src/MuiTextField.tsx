@@ -13,7 +13,12 @@ import { useState } from 'react'
 import FormControl from '@mui/material/FormControl'
 
 export function MuiTextField() {
-  const [formdata, setFormdata] = useState<any>()
+  interface i {
+    username?: String
+    password?: String
+  }
+
+  const [formdata, setFormdata] = useState<i>()
 
   return (
     <Stack spacing={2}>
@@ -65,6 +70,7 @@ export function MuiTextField() {
 
         <TextField
           variant="outlined"
+          value={formdata?.username}
           label="username"
           color="secondary"
           helperText="username must be 8 letters at least"
@@ -81,6 +87,7 @@ export function MuiTextField() {
           helperText="password must be 8 letters at least"
           size="small"
           type="password"
+          value={formdata?.password}
           onChange={(e) => {
             setFormdata({ ...formdata, password: e.target.value })
             console.log(formdata)
