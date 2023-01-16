@@ -1,12 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import App from './App'
-import reportWebVitals from './reportWebVitals'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
-// import { theme } from './theme'
+import { createTheme } from '@mui/material/styles'
 
-const theme = createTheme({
+export const theme = createTheme({
   palette: {
     primary: {
       // light: will be calculated from palette.primary.main,
@@ -14,10 +8,11 @@ const theme = createTheme({
       light: '#ff6600',
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
+      contrastText: '#ffcc00',
     },
     error: {
       light: '#ffee00',
-      main: '#ffcc00',
+      main: '#ff6600',
       dark: '#ddaa00',
       // dark: will be calculated from palette.secondary.main,
       contrastText: '#ffcc00',
@@ -33,7 +28,12 @@ const theme = createTheme({
     // custom colors for props in Material UI's components.
     // Then you will be able to use it like this: `<Button color="custom">`
     // (For TypeScript, you need to add module augmentation for the `custom` value)
-
+    custom: {
+      light: '#ffa726',
+      main: '#f57c00',
+      dark: '#ef6c00',
+      contrastText: 'rgba(0, 0, 0, 0.87)',
+    },
     // Used by `getContrastText()` to maximize the contrast between
     // the background and the text.
     contrastThreshold: 3,
@@ -43,14 +43,3 @@ const theme = createTheme({
     tonalOffset: 0.2,
   },
 })
-
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-root.render(
-  <ThemeProvider theme={theme}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </ThemeProvider>,
-)
-
-reportWebVitals()
